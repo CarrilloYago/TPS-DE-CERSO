@@ -14,8 +14,7 @@ public class Product {
     private Double price;
     private static Long countProduct;
     
-    
-    //agarra de la base de datos
+   
     public Product(Long idProduct, String name, Double price) {
         this.idProduct = idProduct;
         this.name = name;

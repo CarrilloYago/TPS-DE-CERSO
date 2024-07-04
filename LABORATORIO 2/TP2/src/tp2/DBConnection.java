@@ -31,7 +31,6 @@ public class DBConnection {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        //si hay error lo guarda en "e" para despues mostrarlo
         return connection;
     }
 }

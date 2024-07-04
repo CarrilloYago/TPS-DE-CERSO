@@ -39,7 +39,6 @@
             return products;
         }
 
-        //Buscar un producto por su id
        public Product findById(int id) {
     query = "SELECT * FROM products WHERE idproduct = ?";
     try {
@@ -52,9 +51,9 @@
         }
     } catch (SQLException e) {
         e.printStackTrace();
-        // Puedes manejar la excepción aquí según tus necesidades
+
     }
-    return null; // Devuelve null si hay un error o el producto no se encuentra
+    return null; 
 }
 
         public void save(Product product) {
