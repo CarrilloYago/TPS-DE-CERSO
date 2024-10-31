@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: gateway
+  main:
+    web-application-type: reactive
+  cloud:
+    gateway:
+      routes:
+        - id: departments
+          uri: lb://department
+          predicates:
+            - Path=/departments/**
+        - id: users
+          uri: lb://user
+          predicates:
+            - Path=/users/**
+eureka:
+  instance:
+    client:
+      serviceUrl.defaultZone=http://localhost:8761/eureka/

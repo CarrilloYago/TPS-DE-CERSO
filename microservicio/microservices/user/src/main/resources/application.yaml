@@ -1,0 +1,37 @@
+#spring.application.name=user
+#spring.datasource.url=jdbc:h2:mem:testdb
+#spring.datasource.driverClassName=org.h2.Driver
+#spring.datasource.username=user
+#spring.datasource.password=password
+#spring.h2.console.enabled=true
+#server.port=8080
+
+#spring:
+#  application:
+#    name: user
+#  datasource:
+#    url: jdbc:h2:mem:testdb
+#    driverClassName: org.h2.Driver
+#    username: user
+#    password: password
+#  h2:
+#    console:
+#      enabled: true
+#server:
+#  port: 8081
+#
+#  eureka:
+#    instance:
+#      client:
+#        serviceUrl.defaultZone=http://localhost:8761/eureka/
+
+
+server:
+  port: 8081
+
+spring:
+  application:
+    name: user
+
+  config:
+    import: optional:configserver:http://localhost:8888
